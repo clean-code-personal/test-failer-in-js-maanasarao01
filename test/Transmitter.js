@@ -1,4 +1,4 @@
-const {networkTransmitStub, transmitInCelcius}=require( "./transmitter.js");
+const {networkTransmitStub, transmitInCelcius}=require( "../transmitter.js");
 
 transmitInCelcius(400.5);
 transmitInCelcius(303.6);
