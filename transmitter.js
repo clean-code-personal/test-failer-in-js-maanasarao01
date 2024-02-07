@@ -2,15 +2,14 @@ let transmissionFailureCount = 0;
 
 function networkTransmitStub(celcius) {
     console.log(`Temperature to transmit: ${celcius} celcius`);
-
+    const roundedNumber = Math.round(Math.random();
+    // Map 0 to 200 and 1 to 500
+    const stubCode = (roundedNumber === 0) ? 200 : 500;
     // The intention here is to transmit the temperature over a network.
-    // However, this is a stub, so we just print the message above
-    // and give back a return code.
-
     // Return 200 for ok
     // Return 500 for not-ok
-    // This stub always succeeds and returns 200
-    return 200;
+    // This stub either returns 200 or 500
+    return stubCode;
 }
 
 function transmitInCelcius(farenheit) {
@@ -26,4 +25,4 @@ function transmitInCelcius(farenheit) {
     return returnCode;
 }
 
-module.exports={networkTransmitStub, transmitInCelcius,transmissionFailureCount};
+module.exports={transmitInCelcius,transmissionFailureCount};
