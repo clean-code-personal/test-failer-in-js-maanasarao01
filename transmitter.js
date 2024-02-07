@@ -24,4 +24,4 @@ function transmitInCelcius(farenheit) {
         transmissionFailureCount += 0;
     }
 }
-module.exports{networkTransmitStub, transmitInCelcius};
+module.exports={networkTransmitStub, transmitInCelcius};
