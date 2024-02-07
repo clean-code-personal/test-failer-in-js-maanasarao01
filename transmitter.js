@@ -22,7 +22,6 @@ function transmitInCelcius(farenheit) {
         // Add a test below to catch this bug. Alter the stub above, if needed.
         transmissionFailureCount += 1;
     }
-    return returnCode;
 }
 
 module.exports={transmitInCelcius,transmissionFailureCount};
