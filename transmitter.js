@@ -27,5 +27,11 @@ function transmitInCelcius(farenheit) {
 
 transmitInCelcius(400.5);
 transmitInCelcius(303.6);
+
+networkTransmitStub=function(celsius){
+    //non-ok response to simulate failure
+    console.log(`Simulating Failue! Temperature to transmit: ${celcius} celcius`);
+    return 500;
+}
 console.log(`Transmission failed ${transmissionFailureCount} times.`);
-console.log('All is well (maybe!)');
+//console.log('All is well (maybe!)');
