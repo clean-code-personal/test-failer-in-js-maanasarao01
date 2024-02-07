@@ -1,6 +1,6 @@
 let transmissionFailureCount = 0;
 
-function networkTransmitStub(celcius) {
+export function networkTransmitStub(celcius) {
     console.log(`Temperature to transmit: ${celcius} celcius`);
 
     // The intention here is to transmit the temperature over a network.
@@ -13,7 +13,7 @@ function networkTransmitStub(celcius) {
     return 200;
 }
 
-function transmitInCelcius(farenheit) {
+export function transmitInCelcius(farenheit) {
     const celcius = (farenheit - 32) * 5 / 9;
     const returnCode = networkTransmitStub(celcius);
     if (returnCode != 200) {
@@ -24,4 +24,4 @@ function transmitInCelcius(farenheit) {
         transmissionFailureCount += 0;
     }
 }
-module.exports={networkTransmitStub, transmitInCelcius};
+//module.exports={networkTransmitStub, transmitInCelcius};
