@@ -1,9 +1,9 @@
-const {networkTransmitStub, transmitInCelcius} =require('../transmitter.js');
-
+const { transmitInCelcius} =require('../transmitter.js');
+let {networkTransmitStub}=require('../transmitter.js');
 transmitInCelcius(400.5);
 transmitInCelcius(303.6);
 
-let networkTransmitStub=function(celsius){
+networkTransmitStub=function(celsius){
     //non-ok response to simulate failure
     console.log(`Simulating Failue! Temperature to transmit: ${celcius} celcius`);
     return 500;
