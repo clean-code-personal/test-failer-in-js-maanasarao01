@@ -1,4 +1,4 @@
-import {transmitInCelcius} from "./transmitter.js";
+import {networkTransmitStub, transmitInCelcius} from "./transmitter.js";
 
 transmitInCelcius(400.5);
 transmitInCelcius(303.6);
