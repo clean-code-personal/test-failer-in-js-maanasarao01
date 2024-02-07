@@ -1,5 +1,5 @@
 const { transmitInCelcius, transmissionFailureCount} =require('../transmitter.js');
-let {networkTransmitStub}=require('../transmitter.js');
+//let {networkTransmitStub}=require('../transmitter.js');
 transmitInCelcius(400.5);
 transmitInCelcius(303.6);
 
