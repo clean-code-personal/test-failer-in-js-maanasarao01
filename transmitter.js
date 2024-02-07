@@ -4,7 +4,7 @@ function networkTransmitStub(celcius) {
     console.log(`Temperature to transmit: ${celcius} celcius`);
     const roundedNumber = Math.round(Math.random());
     // Map 0 to 200 and 1 to 500
-    const stubCode = (roundedNumber === 0) ? 200 : 500;
+    const stubCode = (roundedNumber == 0) ? 200 : 500;
     // The intention here is to transmit the temperature over a network.
     // Return 200 for ok
     // Return 500 for not-ok
