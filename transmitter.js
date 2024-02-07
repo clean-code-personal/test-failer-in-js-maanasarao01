@@ -33,5 +33,6 @@ networkTransmitStub=function(celsius){
     console.log(`Simulating Failue! Temperature to transmit: ${celcius} celcius`);
     return 500;
 }
+transmitInCelcius(300);//this sould fail 
 console.log(`Transmission failed ${transmissionFailureCount} times.`);
 //console.log('All is well (maybe!)');
