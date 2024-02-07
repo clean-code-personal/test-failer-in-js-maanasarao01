@@ -1,4 +1,4 @@
-const {size}=require("./tshirts.js");
+const {size}=require("../tshirts.js");
 const {expect} = require('chai');
 
 expect(size(37)).equals('S');
