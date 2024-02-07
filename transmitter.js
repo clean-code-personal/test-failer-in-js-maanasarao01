@@ -1,6 +1,6 @@
 let transmissionFailureCount = 0;
 
-let function networkTransmitStub(celcius) {
+let networkTransmitStub(celcius)=function {
     console.log(`Temperature to transmit: ${celcius} celcius`);
 
     // The intention here is to transmit the temperature over a network.
