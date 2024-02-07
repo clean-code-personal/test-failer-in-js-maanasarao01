@@ -1,3 +1,4 @@
+const {expect}=require('chai');
 const { transmitInCelcius, transmissionFailureCount} =require('../transmitter.js');
 
 transmitInCelcius(400.5);
