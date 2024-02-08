@@ -1,5 +1,3 @@
-const {expect} = require('chai')
-
 function color_map() {
     const majorColors = ["White", "Red", "Black", "Yellow", "Violet"];
     const minorColors = ["Blue", "Orange", "Green", "Brown", "Slate"];
@@ -13,13 +11,29 @@ function color_map() {
     return colorCodes;
 }
 
-function print_color_map(colorCodes){
-     colorCodes.forEach(color => {
+function print_color_map(colorCodes) {
+    let loggedOutput = [];
+
+    // Replace the console.log function with a custom function that pushes the output to an array
+    const originalLog = console.log;
+    console.log = function(color) {
+        // Push the logged output to the array
+        loggedOutput.push(color);
+        // Call the original console.log function to output to the console
+        originalLog.apply(console, color);
+    };
+
+    // Iterate over each color code in the colorCodes array
+    colorCodes.forEach(color => {
+        // Log each color code
         console.log(color);
-     });
+    });
+
+    // Restore the original console.log function
+    console.log = originalLog;
+
+    // Return the captured logged output
+    return loggedOutput;
 }
 
-print_color_map(color_map());
-result =color_map().length;
-expect(result).equals(25);
-console.log('All is well (maybe!)');
+module.exports= {color_map, print_color_map};
