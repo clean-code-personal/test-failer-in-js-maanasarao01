@@ -2,7 +2,7 @@ const {expect}=require('chai');
 const {color_map,print_color_map} =require("../misaligned.js");
 
 const loggedOutput= print_color_map(color_map());
-
+console.log(loggedOutput);
 loggedOutput.forEach((colorCodes)=>{
   let colorParts=colorCodes.split('|');
   expect(colorParts[0].length).equals(3);//this should fail if PairNumber is misaligned
