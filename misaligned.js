@@ -14,13 +14,13 @@ function color_map() {
 function print_color_map(colorCodes) {
     let loggedOutput = [];
 
-    /*Replace the console.log function with a custom function that pushes the output to an array
-    const originalLog = console.log;*/
+    //Replace the console.log function with a custom function that pushes the output to an array
+    const originalLog = console.log;
     console.log = function(color) {
         // Push the logged output to the array
         loggedOutput.push(color);
         // Call the original console.log function to output to the console
-       // originalLog.apply(console, arguments);
+       originalLog.apply(console, arguments);
     };
 
     // Iterate over each color code in the colorCodes array
@@ -30,7 +30,7 @@ function print_color_map(colorCodes) {
     });
 
     // Restore the original console.log function
-   // console.log = originalLog;
+   console.log = originalLog;
 
     // Return the captured logged output
     return loggedOutput;
