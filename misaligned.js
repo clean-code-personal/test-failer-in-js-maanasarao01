@@ -20,7 +20,7 @@ function print_color_map(colorCodes) {
         // Push the logged output to the array
         loggedOutput.push(color);
         // Call the original console.log function to output to the console
-        originalLog.apply(console, color);
+        originalLog.apply(console, arguments);
     };
 
     // Iterate over each color code in the colorCodes array
