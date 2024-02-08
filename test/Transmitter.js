@@ -1,14 +1,14 @@
 const {expect}=require('chai');
 const { transmitInCelcius, transmissionFailureCount} =require('../transmitter.js');
 
-let flag=1;
+let firstFailure=1;
 let stubCode=500;//to simulate failure
 function networkTransmitStub(celcius) {
     console.log(`Temperature to transmit: ${celcius} celcius`);
     const roundedNumber = Math.round(Math.random());
-    if(flag){
+    if(firstFailure){
       //this is to ensure transmission of failure in network atleast once
-      flag=0;
+      firstFailure=0;
     }
     else{
       // Map 0 to 200 and 1 to 500
