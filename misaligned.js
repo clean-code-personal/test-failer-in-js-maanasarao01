@@ -11,8 +11,8 @@ function color_map() {
     return colorCodes;
 }
 
-function print_color_map(colorCodes) {
-    let loggedOutput = [];
+/*function print_color_map(colorCodes) {
+   let loggedOutput = [];
 
     //Replace the console.log function with a custom function that pushes the output to an array
     const originalLog = console.log;
@@ -34,6 +34,8 @@ function print_color_map(colorCodes) {
 
     // Return the captured logged output
     return loggedOutput;
-}
+    
+}*/
+console.log(colorCodes);
 
-module.exports= {color_map, print_color_map};
+module.exports= {color_map};
