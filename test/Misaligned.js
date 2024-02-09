@@ -24,7 +24,7 @@ loggedOutput.forEach(colorCodes => {
   expect(majorColor.length).to.equal(majorColorLength);
   expect(minorColor.length).to.equal(minorColorLength);
   //Range check
-  expect(pairNumber).to.be.within(1,25);
+  expect(pairNumber.number).to.be.within(1,25);
 });
 
 // Check total color combinations
