@@ -36,6 +36,6 @@ function color_map() {
     return loggedOutput;
     
 }*/
-console.log(colorCodes);
+console.log(color_map());
 
 module.exports= {color_map};
