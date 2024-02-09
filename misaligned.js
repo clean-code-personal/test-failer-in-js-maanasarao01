@@ -34,8 +34,11 @@ function color_map() {
 
     // Return the captured logged output
     return loggedOutput;
+    }*/
+     color_map().forEach(color => {
+        // Log each color code
+        console.log(color);
+    });
     
-}*/
-console.log(color_map());
 
 module.exports= {color_map};
