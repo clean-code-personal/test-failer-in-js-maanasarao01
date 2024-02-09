@@ -1,7 +1,7 @@
 const {expect}=require('chai');
-const {color_map,print_color_map} =require("../misaligned.js");
+const {color_map} =require("../misaligned.js");
 
-const loggedOutput= print_color_map(color_map());
+const loggedOutput= color_map();
 
 // Check alignment of each parameter
 let pairNumberLength = null;
