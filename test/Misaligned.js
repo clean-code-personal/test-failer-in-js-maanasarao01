@@ -9,7 +9,7 @@ let minorColorLength = null;
 
 loggedOutput.forEach(colorCodes => {
   let colorParts = colorCodes.split('|');
-  let pairNumber = colorParts[0]; 
+  pairNumber = colorParts[0]; 
   let majorColor = colorParts[1];
   let minorColor = colorParts[2];
   
@@ -24,7 +24,7 @@ loggedOutput.forEach(colorCodes => {
   expect(majorColor.length).to.equal(majorColorLength);
   expect(minorColor.length).to.equal(minorColorLength);
   //Range check
-  expect(pairNumber.number).to.be.within(1,25);
+  expect(Number(pairNumber)).to.be.within(1,25);
 });
 
 // Check total color combinations
