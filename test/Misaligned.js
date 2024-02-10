@@ -33,7 +33,7 @@ loggedOutput.forEach(colorCodes => {
   
   //check for duplicates
   expect(saveEarlierPairNumber).to.equal(Number(pairNumber)-1)
-  saveEarlierPairNumber=pairNumber
+  saveEarlierPairNumber=Number(pairNumber)
 });
 
 // Check total color combinations
