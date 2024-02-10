@@ -10,5 +10,4 @@ function transmitInCelcius(farenheit,networkTransmitStub) {
         transmissionFailureCount += 1;
     }
 }
-
 module.exports={transmitInCelcius,getTransmissionFailureCount:()=>transmissionFailureCount};
