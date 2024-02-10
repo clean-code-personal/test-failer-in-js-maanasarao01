@@ -1,5 +1,5 @@
 const {expect}=require('chai');
-const { transmitInCelcius, transmissionFailureCount} =require('../transmitter.js');
+const { transmitInCelcius, getTransmissionFailureCount} =require('../transmitter.js');
 
 let firstFailure=1;
 let stubCode=500;//to simulate failure
@@ -20,15 +20,14 @@ function networkTransmitStub(celcius) {
 
 //using dependency injection
 transmitInCelcius(400.5,networkTransmitStub);
-console.log(`Transmission failed ${transmissionFailureCount} times.`);
+console.log(`Transmission failed ${getTransmissionFailureCount} times.`);
 transmitInCelcius(303.6,networkTransmitStub);
-console.log(`Transmission failed ${transmissionFailureCount} times.`);
+console.log(`Transmission failed ${getTransmissionFailureCount} times.`);
 
 transmitInCelcius(300,networkTransmitStub); 
-console.log(`Transmission failed ${transmissionFailureCount} times.`);
 transmitInCelcius(400,networkTransmitStub);
 
 transmitInCelcius(304.9,networkTransmitStub); 
-console.log(`Transmission failed ${transmissionFailureCount} times.`);
-expect(transmissionFailureCount).to.be.at.least(1);
+console.log(`Transmission failed ${getTransmissionFailureCount} times.`);
+expect(getTransmissionFailureCount).to.be.at.least(1);
 console.log('All is well (maybe!)');
