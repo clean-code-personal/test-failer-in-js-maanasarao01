@@ -7,7 +7,7 @@ function transmitInCelcius(farenheit,networkTransmitStub) {
         // non-ok response indicates failure while transmitting over the network
         // let us keep a count of failures to report
         // However, this code doesn't increment failures - that's a bug!
-        transmissionFailureCount += 0;
+        transmissionFailureCount += 1;
     }
 }
 
