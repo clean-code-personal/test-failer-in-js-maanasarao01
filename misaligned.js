@@ -9,7 +9,7 @@ function color_map() {
     
         for (let i = 0; i < majorColors.length; i++) {
             for (let j = 0; j < minorColors.length; j++) {
-                const pairNumber = i * 5 + j;
+                const pairNumber = i * 5 + j+1;
                 const formattedPairNumber = pairNumber.toString().padEnd(maxPairNumberLength, ' ');
                 const formattedMajorColor = majorColors[i].padEnd(maxMajorColorLength, ' ');
                 const formattedMinorColor = minorColors[j].padEnd(maxMinorColorLength, ' ');
