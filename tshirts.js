@@ -1,7 +1,6 @@
-const {expect} = require('chai');
-
+//production code 
 function size(cms) {
-    if (cms < 38) {
+    if (cms <= 38) {
         return 'S';
     } else if (cms > 38 && cms < 42) {
         return 'M';
@@ -10,7 +9,5 @@ function size(cms) {
     }
 }
 
-expect(size(37)).equals('S');
-expect(size(40)).equals('M');
-expect(size(43)).equals('L');
-console.log('All is well (maybe!)');
+module.exports={size};
+

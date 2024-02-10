@@ -1,16 +1,28 @@
-const {expect} = require('chai')
 
-function print_color_map() {
+function color_map() {
     const majorColors = ["White", "Red", "Black", "Yellow", "Violet"];
     const minorColors = ["Blue", "Orange", "Green", "Brown", "Slate"];
-    for (let i = 0; i < majorColors.length; i++) {
-        for (let j = 0; j < minorColors.length; j++) {
-            console.log(`${i * 5 + j} | ${majorColors[i]} | ${minorColors[j]}`);
+    let colorCodes=[];
+    const maxPairNumberLength = (majorColors.length * minorColors.length).toString().length;
+    const maxMajorColorLength = Math.max(...majorColors.map(color => color.length));
+    const maxMinorColorLength = Math.max(...minorColors.map(color => color.length));
+    
+        for (let i = 0; i < majorColors.length; i++) {
+            for (let j = 0; j < minorColors.length; j++) {
+                const pairNumber = i * 5 + j+1;
+                const formattedPairNumber = pairNumber.toString().padEnd(maxPairNumberLength, ' ');
+                const formattedMajorColor = majorColors[i].padEnd(maxMajorColorLength, ' ');
+                const formattedMinorColor = minorColors[j].padEnd(maxMinorColorLength, ' ');
+                colorCodes.push(`${formattedPairNumber} | ${formattedMajorColor} | ${formattedMinorColor}`);
+            }
         }
-    }
-    return majorColors.length * minorColors.length;
+    return colorCodes;
 }
 
-result = print_color_map();
-expect(result).equals(25);
-console.log('All is well (maybe!)');
+//log colorCodes to the console
+     color_map().forEach(color => {
+        // Log each color code
+        console.log(color);
+    });
+
+module.exports= {color_map};
