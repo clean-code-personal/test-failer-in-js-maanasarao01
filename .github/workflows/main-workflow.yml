@@ -19,8 +19,8 @@ jobs:
       - name: tshirts pass
         run: "node test/tshirt.js"
 
-      - name: transmitter fail
-        run: bash .github/workflows/expectfail.sh "node test/Transmitter.js"
+      - name: transmitter pass
+        run: "node test/Transmitter.js"
 
       - name: misaligned fail
         run: bash .github/workflows/expectfail.sh "node test/Misaligned.js"
