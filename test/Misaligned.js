@@ -16,8 +16,12 @@ loggedOutput.forEach(colorCodes => {
   let minorColor = colorParts[2];
   
   // If lengths are not initialized, set them to the length of the first color code
-  if (!setLengthBasedOnFirstRow) 
+  if (!setLengthBasedOnFirstRow){
+    pairNumberLength = pairNumber.length;
+    majorColorLength = majorColor.length;
+    minorColorLength = minorColor.length;
     setLengthBasedOnFirstRow=1
+  }
   
   // Check if lengths are consistent across all color codes
   expect(pairNumber.length).to.equal(pairNumberLength);
