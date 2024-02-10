@@ -29,5 +29,5 @@ transmitInCelcius(400,networkTransmitStub);
 
 transmitInCelcius(304.9,networkTransmitStub); 
 console.log(`Transmission failed ${getTransmissionFailureCount()} times.`);
-expect(getTransmissionFailureCount).to.be.at.least(1);
+expect(getTransmissionFailureCount()).to.be.at.least(1);
 console.log('All is well (maybe!)');
