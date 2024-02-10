@@ -7,7 +7,7 @@ const loggedOutput= color_map();
 //initially it will be unset
 let setLengthBasedOnFirstRow=0
 
-let saveEarlierPairNumber=-1
+let saveEarlierPairNumber=0
 
 loggedOutput.forEach(colorCodes => {
   let colorParts = colorCodes.split('|');
