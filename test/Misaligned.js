@@ -32,7 +32,7 @@ loggedOutput.forEach(colorCodes => {
   expect(Number(pairNumber)).to.be.within(1,25);
   
   //check for duplicates
-  expect(saveEarlierPairNumber).to.equal(pairNumber-1)
+  expect(saveEarlierPairNumber).to.equal(Number(pairNumber)-1)
   saveEarlierPairNumber=pairNumber
 });
 
