@@ -17,7 +17,7 @@ jobs:
         run:  sudo npm install
       
       - name: tshirts fail
-        run: bash .github/workflows/expectfail.sh "node test/tshirt.js"
+        run: "node test/tshirt.js"
 
       - name: transmitter fail
         run: bash .github/workflows/expectfail.sh "node test/Transmitter.js"
