@@ -20,14 +20,14 @@ function networkTransmitStub(celcius) {
 
 //using dependency injection
 transmitInCelcius(400.5,networkTransmitStub);
-console.log(`Transmission failed ${getTransmissionFailureCount} times.`);
+console.log(`Transmission failed ${getTransmissionFailureCount()} times.`);
 transmitInCelcius(303.6,networkTransmitStub);
-console.log(`Transmission failed ${getTransmissionFailureCount} times.`);
+console.log(`Transmission failed ${getTransmissionFailureCount()} times.`);
 
 transmitInCelcius(300,networkTransmitStub); 
 transmitInCelcius(400,networkTransmitStub);
 
 transmitInCelcius(304.9,networkTransmitStub); 
-console.log(`Transmission failed ${getTransmissionFailureCount} times.`);
+console.log(`Transmission failed ${getTransmissionFailureCount()} times.`);
 expect(getTransmissionFailureCount).to.be.at.least(1);
 console.log('All is well (maybe!)');
