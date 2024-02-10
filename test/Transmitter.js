@@ -20,9 +20,12 @@ function networkTransmitStub(celcius) {
 
 //using dependency injection
 transmitInCelcius(400.5,networkTransmitStub);
+console.log(`Transmission failed ${transmissionFailureCount} times.`);
 transmitInCelcius(303.6,networkTransmitStub);
+console.log(`Transmission failed ${transmissionFailureCount} times.`);
 
 transmitInCelcius(300,networkTransmitStub); 
+console.log(`Transmission failed ${transmissionFailureCount} times.`);
 transmitInCelcius(400,networkTransmitStub);
 
 transmitInCelcius(304.9,networkTransmitStub); 
