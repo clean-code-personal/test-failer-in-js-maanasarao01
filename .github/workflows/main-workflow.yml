@@ -16,7 +16,7 @@ jobs:
       - name: Install Dependncies
         run:  sudo npm install
       
-      - name: tshirts fail
+      - name: tshirts pass
         run: "node test/tshirt.js"
 
       - name: transmitter fail
